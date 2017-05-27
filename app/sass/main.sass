@@ -1,0 +1,373 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+@mixin social-icon($color)
+	color: $color
+	border-color: $color
+	&:hover
+		background-color: $color
+		color: white
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	&.ishome
+		.site-header
+			min-height: 700px
+			height: 100vh
+
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: black
+	z-index: 999
+	opacity: 1
+	visibility: visible
+	transition: 1s all
+
+	.loader
+		width: 75px
+		height: 75px
+		border: solid 2px white
+		border-radius: 50%
+		border-top-color: $accent
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		animation: 2s spin linear infinite
+
+.done
+	visibility: hidden
+	opacity: 0
+
+
+@keyframes spin
+	from
+		transform: translate(-50%, -50%) rotate(0deg)
+	to
+		transform: translate(-50%, -50%) rotate(360deg)
+
+
+header , section
+	position: relative
+	background-size: cover
+	background-position: left
+	background-color: #090909
+
+h1
+	font-size: 50px
+	font-weight: 400
+
+h3, h4
+	font-weight: 300
+	font-size: 25px
+a
+	cursor: pointer
+.name
+	margin-top: 12px
+	a
+		text-decoration: none
+		font-size: 20px
+		color: $accent
+		letter-spacing: 4px
+
+#touch-menu
+	display: none
+	float: right
+	top: 0
+	left: 0
+	z-index: 1
+
+
+.navigation
+	background-color: rgba(white, 0.9)
+	ul
+		list-style: none
+		li
+			display: inline-block
+		a
+			display: block
+			padding: 15px
+			color: $dark
+			&:hover
+				text-decoration: none
+				color: $accent
+				border-bottom: $accent solid 1px
+.active
+	margin-top: 30px
+	border-top: 1px solid $accent
+	border-bottom: 1px solid $accent
+	ul
+		li
+			display: list-item
+			&:hover
+				border: none
+				color: $accent
+.headhesive
+	width: 100%
+	position: fixed
+	transition: 0.5s
+	z-index: 999
+
+.headhesive--unstick
+	background-color: rgba(white, 1)
+.headhesive--stick
+	background-color: rgba($dark, 1)
+	ul a
+		color: white
+
+
+
+.intro-header
+	text-align: center
+	color: white
+	padding:
+		top: 17%
+	.intro-content
+		background-color: rgba($dark, 0.5)
+		border: solid white 1px
+		padding:
+			top: 20px
+			bottom: 20px
+
+section
+	background-color: white
+
+.hamburger
+	position: relative
+	top: 15px
+	left: 15px
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+		background-color: #101211
+		height: 2px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+#my-content
+	padding:
+		top: 80px
+
+.about-content
+	text-align: center
+	color: $dark
+
+	.about-text
+		padding:
+			left: 20%
+			right: 20%
+			bottom: 10%
+
+@at-root
+	hr
+		width: 40px
+		border-color: $accent
+		margin-bottom: 40px
+
+	.about-social
+		margin-top: 60px
+		.CV
+			color: $accent
+			padding: 10px
+			border: solid 1px $accent
+			&:hover
+				color: white
+				background-color: $accent
+
+.about-media
+	a
+		margin:
+			right: 10px
+			left: 10px
+		width: 41px
+		height: 41px
+		color: $accent
+		padding: 10px
+		border: solid 1px $accent
+
+
+	.facebook-icon
+		@include social-icon($facebook)
+
+	.google-icon
+		@include social-icon($google)
+
+	.github-icon
+		@include social-icon($github)
+
+	.twitter-icon
+		@include social-icon($twitter)
+
+.skills
+	margin-top: 20vh
+	padding:
+		left: 30px
+		right: 30px
+	.skills-text
+		text-align: center
+
+.skills-progress
+	margin-top: 7%
+
+.progress
+	height: 10px
+
+.progress-bar
+	background-color: $accent
+
+.content-quote
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: center
+	align-items: center
+	align-content: stretch
+	margin-top: 20vh
+	height: 70vh
+	width: inherit
+	position: relative
+	background-size: cover
+	.qoute-text
+		text-align: center
+		color: white
+		background-color: rgba($dark, 0.5)
+		border: solid white 2px
+		padding:
+			top: 20px
+			bottom: 20px
+
+.portfolio
+	text-align: center
+	margin-top: 20vh
+	padding:
+		left: 50px
+		right: 50px
+	.portfolio-link
+		display: block
+		position: relative
+		margin: 0 auto 30px
+		color: white
+	.portfolio-item-image
+		background-size: cover
+		background-position: center
+		height: 400px
+
+.portfolio-hover
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: $accent
+	transition: 1s
+	opacity: 0
+	&:hover
+		opacity: 0.9
+	.portfolio-hover-content
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+.form-item
+	height: 120px
+
+.contacts
+	margin-top: 20vh
+	margin-bottom: 10vh
+	text-align: center
+	.contacts-form, .contacts-info
+		padding:
+			left: 100px
+			right: 100px
+			top: 20px
+			bottom: 20px
+	label
+		text-align: left
+	input
+		width: 100%
+		height: 50px
+		border: solid 1px $light-dark
+		border-radius: 5px
+		background-color:
+		color: black
+		&:focus
+			outline: 0
+	textarea
+		resize: vertical
+		width: 100%
+	button
+		padding:
+			top: 10px
+			bottom: 10px
+			left: 50px
+			right: 50px
+		color: $accent
+		background-color: white
+		border: solid 1px $accent
+		transition: 0.5s
+		&:hover
+			color: white
+			background-color: $accent
+	.contacts-info
+		margin-top: 10%
+		font-size: 20px
+	ul
+		list-style: none
+		text-align: left
+		padding: 0
+		li
+			margin-top: 20px
+		i
+			margin-right: 20px
+
+footer
+	background-color: $light-dark
+	padding: 20px
+	.in-touch
+		text-align: center
+		margin:
+			top: 15vh
+			bottom: 5vh
+	.copyright
+		margin-bottom: 30px
+	.about-media
+		a
+			margin-left: 0
+
+@import "media"
