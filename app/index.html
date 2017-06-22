@@ -45,7 +45,7 @@
 <div id="my-page">
     <div id="my-header">
         <header class="site-header" style="background-image: url(img/background_1.jpg);">
-            <div class="navigation">
+            <div id="menu" class="navigation">
                 <a id="touch-menu" class="hamburger hamburger--collapse" type="button">
                             <span class="hamburger-box">
                                 <span class="hamburger-inner"></span>
@@ -79,49 +79,46 @@
         </header>
 
     </div>
+    <div id="about" class="row">
+        <div class="about-content">
+            <div class="col-xs-12 about-title">
+                <h1>ABOUT ME</h1>
 
-    <div id="my-content">
-
-        <div id="about" class="about-content">
-            <div class="row">
-                <div class="col-xs-12 about-title">
-                    <h1>ABOUT ME</h1>
-
-                    <h4>LET ME INTRODUCE MYSELF</h4>
-                    <hr>
+                <h4>LET ME INTRODUCE MYSELF</h4>
+                <hr>
+            </div>
+            <div class="col-xs-12 about-text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquid aperiam
+                    architecto
+                    aspernatur beatae consectetur dolores ducimus ex fugiat maiores perspiciatis provident, quas qui
+                    quia sed sequi soluta unde?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquid aperiam
+                    architecto
+                    aspernatur beatae consectetur dolores ducimus ex fugiat maiores perspiciatis provident, quas qui
+                    quia sed sequi soluta unde?
+                </p>
+            </div>
+            <div class="col-md-12 about-social row">
+                <div class="col-xs-12 col-md-2 col-md-push-3">
+                    <a href="#" class="btn CV"><i class="fa fa-download"
+                                                  aria-hidden="true"></i>
+                        DOWNLOAD CV</a>
                 </div>
-                <div class="col-xs-12 about-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquid aperiam
-                        architecto
-                        aspernatur beatae consectetur dolores ducimus ex fugiat maiores perspiciatis provident, quas qui
-                        quia sed sequi soluta unde?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquid aperiam
-                        architecto
-                        aspernatur beatae consectetur dolores ducimus ex fugiat maiores perspiciatis provident, quas qui
-                        quia sed sequi soluta unde?
-                    </p>
-                </div>
-                <div class="col-md-12 about-social row">
-                    <div class="col-xs-12 col-md-2 col-md-push-3">
-                        <a href="#" class="btn CV"><i class="fa fa-download"
-                                                      aria-hidden="true"></i>
-                            DOWNLOAD CV</a>
-                    </div>
-                    <div class="col-xs-12 col-md-push-3 col-md-5 about-media">
-                        <a class="btn facebook-icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        <a class="btn google-icon" href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
-                        <a class="btn github-icon" href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        <a class="btn twitter-icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <div class="col-xs-12 col-md-push-3 col-md-5 about-media">
+                    <a class="btn facebook-icon" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a class="btn google-icon" href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+                    <a class="btn github-icon" href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a class="btn twitter-icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
 
-                    </div>
                 </div>
             </div>
         </div>
-
-        <div id="skills" class="skills row">
+    </div>
+    <div id="skills" class="row">
+        <div class="skills">
             <div class="col-xs-12 col-md-6 skills-text">
                 <h1>MY SKILLS</h1>
                 <h4>EXPERIENCE</h4>
@@ -167,9 +164,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="content-quote" style="background-image: url(img/background_2.jpg)">
 
         <div class="col-xs-12 col-sm-6 qoute-text">
@@ -263,6 +258,7 @@
                 <h3>GET IN TOUCH</h3>
                 <hr>
             </div>
+            <form>
             <div class="contacts-form col-md-6">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -300,6 +296,7 @@
                     </li>
                 </ul>
             </div>
+            </form>
         </div>
     </div>
 

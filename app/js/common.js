@@ -4,10 +4,9 @@ $(function () {
      Header
      */
 
-
     // Headhesive plugin
     var options = {
-        offset: '#my-content'
+        offset: '#about'
     };
 
     var Headhesive = require('headhesive');
